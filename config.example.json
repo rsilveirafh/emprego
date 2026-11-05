@@ -1,0 +1,8 @@
+{
+  "projeto": "/caminho/absoluto/para/a/pasta/da/busca",
+  "curriculo_repo": "/caminho/absoluto/para/o/repositorio/do/curriculo (opcional, deixe vazio se não houver)",
+  "curriculo_fonte": "arquivo com o texto do currículo dentro do repositório, ex.: dados/cv.yaml ou curriculo.md (opcional)",
+  "curriculo_compilar": "comando que gera os PDFs, rodado dentro do repositório, ex.: sh compilar.sh (opcional)",
+  "commit": true,
+  "mensagem_commit": "busca de emprego (AAAA-MM-DD): <resumo>"
+}
