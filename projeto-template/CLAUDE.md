@@ -49,6 +49,10 @@ aqui ficam as regras gerais e as minhas escolhas.
 **Versões.** Se o currículo estiver num repositório git (`curriculo_repo` na config), cada envio
 ganha uma tag `envio-AAAA-MM-DD-empresa`. Sem repositório, o tracker anota o arquivo e a data.
 
+**Versão da vaga.** Quando uma vaga pede outro foco, o `/emprego:candidatar` cria `vagas/AAAA-MM-DD-empresa/curriculo.<ext>`
+(só o que muda em relação à base) e gera os PDFs na mesma pasta (`curriculo_compilar_vaga` na config).
+Muda a ordem, o foco e o corte; nunca os fatos. Depois do envio, a versão da vaga não muda.
+
 ## Golpes: checklist antes de aceitar uma entrevista
 
 - Pediram para **baixar e rodar código** ou um repositório "para achar um bug"? Recusar. Teste legítimo acontece no navegador, em plataforma conhecida.
@@ -79,6 +83,7 @@ busca/
 ├── vagas/
 │   ├── AAAA-MM-DD-busca.md         rodada de busca + triagem
 │   └── AAAA-MM-DD-empresa/         vaga.md, cobertura.md, entrevista.md
+│                                   e, se houver, curriculo.<ext> + PDFs da versão da vaga
 └── retrospectivas/AAAA-MM-DD.md
 ```
 

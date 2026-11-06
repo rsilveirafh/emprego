@@ -3,6 +3,7 @@
   "curriculo_repo": "/caminho/absoluto/para/o/repositorio/do/curriculo (opcional, deixe vazio se não houver)",
   "curriculo_fonte": "arquivo com o texto do currículo dentro do repositório, ex.: dados/cv.yaml ou curriculo.md (opcional)",
   "curriculo_compilar": "comando que gera os PDFs, rodado dentro do repositório, ex.: sh compilar.sh (opcional)",
+  "curriculo_compilar_vaga": "comando que gera os PDFs de uma versão da vaga, rodado dentro do repositório; {arquivo} é o arquivo da versão e {pasta} a pasta da vaga, ex.: sh compilar.sh {arquivo} {pasta} (opcional)",
   "commit": true,
   "mensagem_commit": "busca de emprego (AAAA-MM-DD): <resumo>"
 }

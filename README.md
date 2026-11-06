@@ -29,7 +29,7 @@ Este plugin parte de outro lugar: **o `perfil-verdade.md`**. Ele guarda só o qu
 | `/emprego:perfil` | Na primeira vez, monta o perfil a partir do seu currículo, LinkedIn ou de uma conversa, com tudo marcado `[confirmar]`. Depois, revisa os `[confirmar]` (3 por vez), registra fato novo ou correção (`/emprego:perfil fiz X em Y`), lacuna (`lacuna: ...`), exclusão (`não quero: ...`) e critério (`critério: ...`), e propõe a mudança no currículo |
 | `/emprego:buscar dados remoto` | Busca vagas dos últimos 14 dias para uma família, com link conferido, sem repetir rodadas anteriores nem o que está nas exclusões. Salva uma lista numerada |
 | `/emprego:triar 3 5 8` | Aderência de cada vaga **com evidência tirada do perfil**: alta só quando todo requisito obrigatório tem prova. Lacunas pelo nome, alertas de golpe |
-| `/emprego:candidatar 5` | Salva o anúncio inteiro, escolhe o currículo pelo canal, cruza requisito por requisito com o currículo e o perfil (cobertura forte, parcial, lacunas, inconsistências) e para. **Quem envia é você** |
+| `/emprego:candidatar 5` | Salva o anúncio inteiro, escolhe o currículo pelo canal, cruza requisito por requisito com o currículo e o perfil (cobertura forte, parcial, lacunas, inconsistências) e para. Se você pedir, monta uma **versão do currículo só para a vaga**, com o arquivo e os PDFs na pasta dela. **Quem envia é você** |
 | `/emprego:candidatar enviei Empresa` | Registra o envio no tracker com a versão exata do currículo (tag no git, se o currículo for um repositório) |
 | `/emprego:entrevista Empresa` | Parte do currículo **que a empresa recebeu**: histórias STAR só com fatos do perfil, resposta honesta para cada lacuna, perguntas para a empresa e estratégia de salário |
 | `/emprego:retro` | Números por fonte, família, modelo e currículo; comparação com a retrospectiva anterior; pelo menos uma decisão |
@@ -73,12 +73,15 @@ As regras gerais e as suas escolhas ficam no `CLAUDE.md` do projeto; as instruç
      "curriculo_repo": "",
      "curriculo_fonte": "",
      "curriculo_compilar": "",
+     "curriculo_compilar_vaga": "",
      "commit": true,
      "mensagem_commit": "busca de emprego (AAAA-MM-DD): <resumo>"
    }
    ```
 
    Os campos `curriculo_*` são opcionais. Se o seu currículo é gerado a partir de um arquivo de texto num repositório git (YAML, Markdown, LaTeX, Typst...), preencha-os: o plugin passa a propor as mudanças no currículo e a marcar com tag cada versão enviada.
+
+   **Versão da vaga.** Para mandar a uma vaga um currículo com outro foco sem mexer na base, o `/emprego:candidatar` cria `vagas/AAAA-MM-DD-empresa/curriculo.<ext>` (só o que muda, se o seu compilador aceitar sobreposição; senão, uma cópia) e roda `curriculo_compilar_vaga`, que deve gerar os PDFs na pasta da vaga. Ex.: `sh compilar.sh {arquivo} {pasta}`. O arquivo e o PDF ficam junto do anúncio e da cobertura, e o PDF commitado é o registro do que a empresa recebeu. Muda a ênfase, nunca os fatos: tudo continua saindo do perfil-verdade.
 
 4. Rode `/emprego:perfil`.
 
@@ -108,7 +111,7 @@ A [Claude Code](https://claude.com/claude-code) plugin for job hunting around a 
 
 - `perfil-verdade.md` ("truth profile") holds only what you confirmed, with the origin of every number (`[medido]` measured, `[estimado]` estimated, `[sem número]` no number), declared gaps and what must never go on a résumé.
 - `/emprego:perfil` builds it the first time (from your résumé, LinkedIn or a conversation, everything flagged `[confirmar]`) and maintains it afterwards.
-- `/emprego:buscar` searches the last 14 days of postings; `/emprego:triar` screens them with evidence from the profile only; `/emprego:candidatar` runs a requirement-by-requirement coverage review and stops before sending; `/emprego:candidatar enviei <company>` logs the exact résumé version sent (git tag, if your résumé lives in a repo); `/emprego:entrevista` prepares STAR stories from the version the company actually received; `/emprego:retro` runs a fortnightly retrospective that must end in a decision.
+- `/emprego:buscar` searches the last 14 days of postings; `/emprego:triar` screens them with evidence from the profile only; `/emprego:candidatar` runs a requirement-by-requirement coverage review and stops before sending, and on request builds a job-specific résumé version (source and PDFs in the job's folder, same facts, different emphasis); `/emprego:candidatar enviei <company>` logs the exact résumé version sent (git tag, if your résumé lives in a repo); `/emprego:entrevista` prepares STAR stories from the version the company actually received; `/emprego:retro` runs a fortnightly retrospective that must end in a decision.
 
 Install: `claude plugin marketplace add rsilveirafh/claude-plugins`, then `claude plugin install emprego@rsilveirafh-plugins`. Copy `projeto-template/` somewhere private, copy `config.example.json` to `~/.claude/emprego-config.json`, and run `/emprego:perfil`.
 

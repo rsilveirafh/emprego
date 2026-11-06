@@ -2,7 +2,7 @@
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "emprego",
   "displayName": "Emprego",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Busca de emprego com uma fonte única de verdade: /emprego:perfil monta e mantém o perfil-verdade, e /emprego:buscar, /emprego:triar, /emprego:candidatar, /emprego:entrevista e /emprego:retro trabalham só com fatos de lá. O agente propõe, você decide e você envia.",
   "author": {
     "name": "Ricardo Silveira",
