@@ -82,7 +82,7 @@ busca/
 ├── tracker.csv            uma linha por candidatura ou contato
 ├── vagas/
 │   ├── buscas/AAAA-MM-DD-busca.md  rodada de busca + triagem
-│   ├── AAAA-MM-DD-empresa/         em preparo: vaga.md, cobertura.md, entrevista.md
+│   ├── 0-em-preparo/AAAA-MM-DD-empresa/  vaga.md, cobertura.md, entrevista.md
 │   │                               e, se houver, curriculo.<ext> + PDFs da versão da vaga
 │   ├── 1-enviadas/                 depois do "enviei"
 │   ├── 2-recusadas/                a empresa disse não

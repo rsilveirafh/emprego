@@ -24,9 +24,9 @@ Argumentos: $ARGUMENTS.
 
 ## Se for uma vaga nova
 
-1. Crie `[proj]/vagas/AAAA-MM-DD-empresa/vaga.md` com link, data, fonte, família, modelo, regime e o **texto completo** do anúncio (anúncios somem).
+1. Crie `[proj]/vagas/0-em-preparo/AAAA-MM-DD-empresa/vaga.md` com link, data, fonte, família, modelo, regime e o **texto completo** do anúncio (anúncios somem).
 2. Escolha o currículo pela tabela "Currículos" do CLAUDE.md, conforme o canal (portal/ATS ou direto para uma pessoa), e o idioma da vaga.
-3. Escreva `[proj]/vagas/AAAA-MM-DD-empresa/cobertura.md` cruzando a vaga com o currículo escolhido (texto em `curriculo_fonte`, se houver; senão, peça o arquivo) e com o perfil-verdade:
+3. Escreva `[proj]/vagas/0-em-preparo/AAAA-MM-DD-empresa/cobertura.md` cruzando a vaga com o currículo escolhido (texto em `curriculo_fonte`, se houver; senão, peça o arquivo) e com o perfil-verdade:
    1. fontes usadas (currículo, idioma e, se houver repositório, o commit atual);
    2. cobertura forte: requisito → trecho do currículo → trecho do perfil;
    3. cobertura parcial;
@@ -39,7 +39,7 @@ Argumentos: $ARGUMENTS.
 5. Passe pelo checklist de golpes do CLAUDE.md.
 6. Se o usuário decidir ajustar o currículo, há dois caminhos. Nos dois, corrija primeiro o perfil-verdade se o fato não estiver lá.
    - **Ajuste na base** (vale para todas as vagas daqui em diante): edite `curriculo_fonte`, rode `curriculo_compilar` dentro de `curriculo_repo` e faça commit lá (e push, se houver remoto).
-   - **Versão da vaga** (quando o usuário pedir um currículo para esta vaga, ou quando a vaga pedir um foco que não serve às outras): crie `[proj]/vagas/AAAA-MM-DD-empresa/curriculo.<ext>`, com a mesma extensão de `curriculo_fonte`.
+   - **Versão da vaga** (quando o usuário pedir um currículo para esta vaga, ou quando a vaga pedir um foco que não serve às outras): crie `[proj]/vagas/0-em-preparo/AAAA-MM-DD-empresa/curriculo.<ext>`, com a mesma extensão de `curriculo_fonte`.
      - O arquivo traz só o que muda em relação à base (título, resumo, ordem e corte dos itens, projetos, competências), se o compilador aceitar sobreposição; senão, uma cópia inteira. No topo, um comentário com a vaga, a data e a regra: "só fatos do perfil-verdade; muda ordem, foco e corte, não acrescenta fato".
      - Mude a ênfase, não os fatos: cargo oficial, datas e números iguais ao perfil. Papel que não é o cargo oficial vai entre parênteses e é apontado para o usuário aprovar.
      - Rode `curriculo_compilar_vaga` dentro de `curriculo_repo`, com `{arquivo}` e `{pasta}` substituídos. Os PDFs ficam na pasta da vaga, ao lado do arquivo. Sem `curriculo_compilar_vaga`, deixe o arquivo pronto e diga ao usuário que falta gerar o PDF.
@@ -50,10 +50,10 @@ Argumentos: $ARGUMENTS.
 
 1. Se houver `curriculo_repo` com git: crie a tag anotada `envio-AAAA-MM-DD-empresa` no commit atual (mensagem: empresa, currículo e idioma) e faça push da tag, se houver remoto. Sem repositório: anote o nome do arquivo enviado.
    - Se a pasta da vaga tiver uma **versão da vaga** (`curriculo.<ext>` e os PDFs), confirme com o usuário qual PDF foi enviado. Esse arquivo, commitado junto com `[proj]`, é o registro do que a empresa recebeu; daí em diante a versão da vaga não muda.
-2. Mova a pasta da vaga de `[proj]/vagas/` para `[proj]/vagas/1-enviadas/` (`git mv` se o projeto for um repositório) e corrija os links para o caminho antigo.
+2. Mova a pasta da vaga de `[proj]/vagas/0-em-preparo/` para `[proj]/vagas/1-enviadas/` (`git mv` se o projeto for um repositório) e corrija os links para o caminho antigo.
 3. Acrescente ou atualize a linha da vaga em `tracker.csv`, com `curriculo` = `currículo-idioma · tag` (ou o arquivo), status `enviada` e o próximo passo. Com versão da vaga: `vaga-<modelo>-<idioma> · tag` (ex.: `vaga-sobrio-en · envio-2026-11-09-ueni`).
 
-**Pastas por situação** (em `[proj]/vagas/`): a pasta nasce na raiz enquanto a candidatura é preparada; depois do envio vai para `1-enviadas/`. Recusa da empresa: `2-recusadas/`. Desistência do usuário: `3-desisti/`. Vaga fechada antes do envio: `4-encerradas/`. Rodadas de busca: `buscas/`. Mudou a situação, muda a pasta e os links.
+**Pastas por situação** (em `[proj]/vagas/`): a pasta nasce em `0-em-preparo/` (também o que espera contato ou decisão); depois do envio vai para `1-enviadas/`. Recusa da empresa: `2-recusadas/`. Desistência do usuário: `3-desisti/`. Vaga fechada antes do envio: `4-encerradas/`. Rodadas de busca: `buscas/`. Mudou a situação, muda a pasta e os links.
 
 ## Gravar
 

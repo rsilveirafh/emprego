@@ -18,7 +18,7 @@ Argumentos: $ARGUMENTS.
 
 ## O que fazer
 
-1. Encontre a pasta da vaga em `[proj]/vagas/` ou numa das subpastas (`1-enviadas/`, `2-recusadas/`…) e leia `vaga.md` e `cobertura.md`. Veja no tracker a versão do currículo enviado e leia essa versão: se a pasta da vaga tiver uma versão da vaga (`curriculo.<ext>` e o PDF enviado), leia o PDF da pasta; senão, com tag, `git -C <curriculo_repo> show <tag>:<curriculo_fonte>`; sem tag, o arquivo anotado. A entrevista parte do que a empresa leu.
+1. Encontre a pasta da vaga numa das subpastas de `[proj]/vagas/` (`1-enviadas/`, `0-em-preparo/`…) e leia `vaga.md` e `cobertura.md`. Veja no tracker a versão do currículo enviado e leia essa versão: se a pasta da vaga tiver uma versão da vaga (`curriculo.<ext>` e o PDF enviado), leia o PDF da pasta; senão, com tag, `git -C <curriculo_repo> show <tag>:<curriculo_fonte>`; sem tag, o arquivo anotado. A entrevista parte do que a empresa leu.
 2. Pesquise a empresa (site, notícias recentes, produto, avaliações de funcionários) e confira se o contato veio por canal oficial (checklist de golpes).
 3. Escreva `entrevista.md` na pasta da vaga, no idioma da entrevista:
    - 5 ou 6 histórias reais no formato STAR (situação, tarefa, ação, resultado), só com fatos e números do perfil-verdade, cada uma servindo a mais de uma pergunta provável;

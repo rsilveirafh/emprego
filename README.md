@@ -47,7 +47,7 @@ busca/
 ├── exclusoes.md         empresas e tipos de vaga que não voltam
 ├── tracker.csv          uma linha por candidatura ou contato
 ├── vagas/               buscas/ e uma pasta por candidatura, separadas por situação
-│                        (1-enviadas, 2-recusadas, 3-desisti, 4-encerradas)
+│                        (0-em-preparo, 1-enviadas, 2-recusadas, 3-desisti, 4-encerradas)
 └── retrospectivas/
 ```
 
