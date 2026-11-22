@@ -46,7 +46,8 @@ busca/
 ├── perfil-verdade.md    fonte única dos fatos da carreira
 ├── exclusoes.md         empresas e tipos de vaga que não voltam
 ├── tracker.csv          uma linha por candidatura ou contato
-├── vagas/               rodadas de busca e uma pasta por candidatura
+├── vagas/               buscas/ e uma pasta por candidatura, separadas por situação
+│                        (1-enviadas, 2-recusadas, 3-desisti, 4-encerradas)
 └── retrospectivas/
 ```
 

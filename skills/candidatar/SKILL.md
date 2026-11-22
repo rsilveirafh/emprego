@@ -50,7 +50,10 @@ Argumentos: $ARGUMENTS.
 
 1. Se houver `curriculo_repo` com git: crie a tag anotada `envio-AAAA-MM-DD-empresa` no commit atual (mensagem: empresa, currículo e idioma) e faça push da tag, se houver remoto. Sem repositório: anote o nome do arquivo enviado.
    - Se a pasta da vaga tiver uma **versão da vaga** (`curriculo.<ext>` e os PDFs), confirme com o usuário qual PDF foi enviado. Esse arquivo, commitado junto com `[proj]`, é o registro do que a empresa recebeu; daí em diante a versão da vaga não muda.
-2. Acrescente ou atualize a linha da vaga em `tracker.csv`, com `curriculo` = `currículo-idioma · tag` (ou o arquivo), status `enviada` e o próximo passo. Com versão da vaga: `vaga-<modelo>-<idioma> · tag` (ex.: `vaga-sobrio-en · envio-2026-11-09-ueni`).
+2. Mova a pasta da vaga de `[proj]/vagas/` para `[proj]/vagas/1-enviadas/` (`git mv` se o projeto for um repositório) e corrija os links para o caminho antigo.
+3. Acrescente ou atualize a linha da vaga em `tracker.csv`, com `curriculo` = `currículo-idioma · tag` (ou o arquivo), status `enviada` e o próximo passo. Com versão da vaga: `vaga-<modelo>-<idioma> · tag` (ex.: `vaga-sobrio-en · envio-2026-11-09-ueni`).
+
+**Pastas por situação** (em `[proj]/vagas/`): a pasta nasce na raiz enquanto a candidatura é preparada; depois do envio vai para `1-enviadas/`. Recusa da empresa: `2-recusadas/`. Desistência do usuário: `3-desisti/`. Vaga fechada antes do envio: `4-encerradas/`. Rodadas de busca: `buscas/`. Mudou a situação, muda a pasta e os links.
 
 ## Gravar
 

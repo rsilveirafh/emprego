@@ -12,7 +12,7 @@ Leia `~/.claude/emprego-config.json`. Campos: `projeto` (pasta da busca, abaixo 
 
 ## Antes de tudo
 
-Leia `[proj]/CLAUDE.md`, `[proj]/tracker.csv`, todas as rodadas em `[proj]/vagas/` e a retrospectiva anterior em `[proj]/retrospectivas/`, se houver.
+Leia `[proj]/CLAUDE.md`, `[proj]/tracker.csv`, todas as rodadas em `[proj]/vagas/buscas/`, as pastas das vagas (em `vagas/` e nas subpastas `1-enviadas/`, `2-recusadas/`, `3-desisti/`, `4-encerradas/`) e a retrospectiva anterior em `[proj]/retrospectivas/`, se houver.
 
 ## O que fazer
 

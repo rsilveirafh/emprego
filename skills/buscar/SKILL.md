@@ -18,10 +18,10 @@ Argumentos: $ARGUMENTS (sigla da família e, opcionalmente, um filtro). Sem fam�
 
 ## O que fazer
 
-1. Veja as rodadas anteriores em `[proj]/vagas/*-busca.md`: a numeração continua de onde a última parou, e vaga já listada ou já no tracker não volta.
+1. Veja as rodadas anteriores em `[proj]/vagas/buscas/*-busca.md`: a numeração continua de onde a última parou, e vaga já listada ou já no tracker não volta.
 2. Pesquise vagas publicadas nos **últimos 14 dias** que se encaixem na família e nos critérios do CLAUDE.md (modelo, regime, piso). Use a busca da web, no modo mais completo disponível. Escolha as fontes pela família e pelo país: portais gerais (LinkedIn, Indeed, Glassdoor), portais locais e de nicho (no Brasil, por exemplo, Gupy, Programathor, Remotar, Trampos), vagas remotas internacionais (Wellfound, We Work Remotely, RemoteOK), sites de empresas, ONGs e órgãos públicos da área, e, para vagas acadêmicas, editais, bolsas e concursos.
 3. Para cada vaga, confirme que o link abre e que a vaga ainda está aberta. Se não deu para confirmar, marque `link não confirmado`.
-4. Salve em `[proj]/vagas/AAAA-MM-DD-busca.md` (se já existir no dia, acrescente uma seção `## Rodada 2`). Cabeçalho com data, família, filtro e fontes consultadas. Depois, uma tabela:
+4. Salve em `[proj]/vagas/buscas/AAAA-MM-DD-busca.md` (se já existir no dia, acrescente uma seção `## Rodada 2`). Cabeçalho com data, família, filtro e fontes consultadas. Depois, uma tabela:
 
    `nº | vaga | empresa | família | candidatura (simplificada ou externa) | modelo | regime | publicada em | link | requisitos principais | alertas`
 

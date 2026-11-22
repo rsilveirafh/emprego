@@ -14,7 +14,7 @@ Leia `~/.claude/emprego-config.json`. Campos: `projeto` (pasta da busca, abaixo 
 
 Leia `[proj]/CLAUDE.md` (regras de ouro, critérios, famílias, golpes), `[proj]/perfil-verdade.md`, `[proj]/exclusoes.md` e `[proj]/tracker.csv`. Se o perfil-verdade ainda for o modelo (comentário `modelo:` no topo), peça para rodar `/emprego:perfil` primeiro e pare. Siga as regras de ouro do CLAUDE.md o tempo todo.
 
-Argumentos: $ARGUMENTS. Números se referem à rodada mais recente em `[proj]/vagas/*-busca.md`. Um link ou texto colado é uma vaga avulsa.
+Argumentos: $ARGUMENTS. Números se referem à rodada mais recente em `[proj]/vagas/buscas/*-busca.md`. Um link ou texto colado é uma vaga avulsa.
 
 ## O que fazer
 
@@ -26,7 +26,7 @@ Argumentos: $ARGUMENTS. Números se referem à rodada mais recente em `[proj]/va
    - Aderência **alta** só quando todo requisito obrigatório tem evidência no perfil-verdade. Requisito sem evidência é "sem evidência", nunca suposição.
    - Alertas: golpe (checklist do CLAUDE.md), mudança de cidade, regime fora do comum, empresa em exclusões.
    - Recomendação: candidatar, candidatar com ressalva (diga qual) ou pular.
-3. Grave a triagem no arquivo da busca, numa seção `## Triagem (AAAA-MM-DD)`. Vaga avulsa vai para `[proj]/vagas/AAAA-MM-DD-avulsas.md`.
+3. Grave a triagem no arquivo da busca, numa seção `## Triagem (AAAA-MM-DD)`. Vaga avulsa vai para `[proj]/vagas/buscas/AAAA-MM-DD-avulsas.md`.
 4. Se aparecer um padrão de vaga indesejada, sugira (sem gravar) `/emprego:perfil não quero: ...`.
 
 ## Gravar

@@ -81,9 +81,13 @@ busca/
 ├── exclusoes.md           empresas e tipos de vaga que não quero
 ├── tracker.csv            uma linha por candidatura ou contato
 ├── vagas/
-│   ├── AAAA-MM-DD-busca.md         rodada de busca + triagem
-│   └── AAAA-MM-DD-empresa/         vaga.md, cobertura.md, entrevista.md
-│                                   e, se houver, curriculo.<ext> + PDFs da versão da vaga
+│   ├── buscas/AAAA-MM-DD-busca.md  rodada de busca + triagem
+│   ├── AAAA-MM-DD-empresa/         em preparo: vaga.md, cobertura.md, entrevista.md
+│   │                               e, se houver, curriculo.<ext> + PDFs da versão da vaga
+│   ├── 1-enviadas/                 depois do "enviei"
+│   ├── 2-recusadas/                a empresa disse não
+│   ├── 3-desisti/                  o usuário desistiu
+│   └── 4-encerradas/               a vaga fechou antes do envio
 └── retrospectivas/AAAA-MM-DD.md
 ```
 
